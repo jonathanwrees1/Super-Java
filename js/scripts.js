@@ -5,23 +5,24 @@ let pokemonList = [
 
   { myName: 'Beedrill', height: 1.0, type: ['bug', 'poison'] },
 ];
-
-for (let i = 0; i < pokemonList.length; i++) {
-  if (pokemonList[i].height > 0.7) {
+pokemonList.forEach (function(trait) {
+  if (trait.height > 0.7) {
     document.write(
-      pokemonList[i].myName +
+      trait.myName +
         ' (height: ' +
-        pokemonList[i].height +
+        trait.height +
         'm) - ' +
         'Wow, that\'s big!' +
         '<br /><br />'
     );
   } else
     document.write(
-      pokemonList[i].myName +
+      trait.myName +
         ' (height: ' +
-        pokemonList[i].height +
+        trait.height +
         'm)' +
         '<br /><br />'
     );
-}
+});
+
+

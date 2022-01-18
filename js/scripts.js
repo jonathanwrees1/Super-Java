@@ -16,26 +16,27 @@ let pokemonRepository = (function () {
 
   return {
     add: add,
-    getAll: getAll
-
+    getAll: getAll,
   };
-
 })();
 
 console.log(pokemonRepository.getAll());
-pokemonRepository.add('Golom');
+pokemonRepository.add({
+  myName: 'Golem',
+  height: 1.4,
+  type: ['Rock', 'Ground'],
+});
 console.log(pokemonRepository.getAll());
 
-
-(pokemonRepository.getAll()).forEach(function (trait) {
+pokemonRepository.getAll().forEach(function (trait) {
   if (trait.height > 0.7) {
     document.write(
       trait.myName +
-      ' (height: ' +
-      trait.height +
-      'm) - ' +
-      "Wow, that's big!" +
-      '<br /><br />'
+        ' (height: ' +
+        trait.height +
+        'm) - ' +
+        "Wow, that's big!" +
+        '<br /><br />'
     );
   } else document.write(trait.myName + ' (height: ' + trait.height + 'm)' + '<br /><br />');
 });

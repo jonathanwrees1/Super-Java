@@ -20,13 +20,11 @@ let pokemonRepository = (function () {
   };
 })();
 
-console.log(pokemonRepository.getAll());
 pokemonRepository.add({
   myName: 'Golem',
   height: 1.4,
   type: ['Rock', 'Ground'],
 });
-console.log(pokemonRepository.getAll());
 
 pokemonRepository.getAll().forEach(function (trait) {
   if (trait.height > 0.7) {

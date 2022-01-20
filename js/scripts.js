@@ -14,21 +14,40 @@ let pokemonRepository = (function () {
     return pokemonList;
   }
 
+  function addListItem (pokemon){
+    let superPokey = document.querySelector ('.pokemon-list');
+    let listItem = document.createElement ('li');
+    let button = document.createElement ('button');
+    button.innerText = pokemon.myName;
+    button.classList.add ('prettyButton');
+    listItem.appendChild (button);
+    superPokey.appendChild (listItem);
+    button.addEventListener ('click', function (showDetails) {
+      console.log (pokemon.myName);
+    });
+  }
+
+  function showDetails(pokemon){
+    console.log (pokemon.myName);
+  }
+
   return {
     add: add,
     getAll: getAll,
+    addListItem: addListItem,
+    showDetails: showDetails
   };
 })();
 
-pokemonRepository.getAll().forEach(function (trait) {
-  if (trait.height > 0.7) {
-    document.write(
-      trait.myName +
-        ' (height: ' +
-        trait.height +
-        'm) - ' +
-        "Wow, that's big!" +
-        '<br /><br />'
-    );
-  } else document.write(trait.myName + ' (height: ' + trait.height + 'm)' + '<br /><br />');
+pokemonRepository.getAll().forEach(function (pokemon) {
+  
+pokemonRepository.addListItem (pokemon);
+
+
+
+
+  
+  
+
+
 });

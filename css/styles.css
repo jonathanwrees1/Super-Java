@@ -1,3 +1,9 @@
+.pokemon-header {
+  font-size: 40px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  text-align: center;
+}
+
 .pokemonList {
   max-width: auto;
   margin: 40px 80px;

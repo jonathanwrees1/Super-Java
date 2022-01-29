@@ -1,26 +1,32 @@
-.pokemon-header {
-  font-size: 40px;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  text-align: center;
+.pokemonList {
+  background-color: rgb(77, 122, 123);
 }
 
-.pokemonList {
+.pokemon-header {
+  font-size: 40px;
+  font-family: Luminari, fantasy;
+  text-align: center;
+  border: 5px solid black;
+  max-width: 300px;
+  margin: 0 auto;
+  border-radius: 50%;
+}
+
+.pokemon-list {
+  list-style-type: none;
   max-width: auto;
-  margin: 40px 80px;
+  margin: 40px 40px;
   text-align: left;
-  font-size: 20px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .prettyButton {
-  background-color: lightcoral;
-  color: white;
-  font-size: 20px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: rgb(254, 248, 248);
+  color: black;
+  font-size: 23px;
+  font-family: Optima, sans-serif;
   margin: 10px 20px;
-  text-align: left;
-  border-radius: 5px;
 }
+
 #modal-container {
   position: fixed;
   padding: 20px;
@@ -76,5 +82,6 @@
 
 #modal-container.is-visible {
   /* CSS for modal container - add your own desired CSS styles here */
+  font-family: Optima, sans-serif;
   display: block;
 }

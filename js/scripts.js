@@ -24,6 +24,7 @@ let pokemonRepository = (function () {
     //pokemon sprite added
     let imageElement = document.createElement('img');
     imageElement.src = imageUrl;
+    imageElement.classList.add('image-element');
 
     modal.appendChild(closeButtonElement);
     modal.appendChild(titleElement);
@@ -47,7 +48,7 @@ let pokemonRepository = (function () {
     }
   }
 
-  function showDialog(title, text) {
+  /*function showDialog(title, text) {
     showModal(title, text);
 
     // We have defined modalContainer here
@@ -110,7 +111,7 @@ let pokemonRepository = (function () {
 
   document.querySelector('#show-modal').addEventListener('click', () => {
     showModal('Hold on There!', 'Look at this cool box!');
-  });
+  });*/
 
   let pokemonList = [];
   //external site we get the pokemon info from

@@ -36,71 +36,21 @@ let pokemonRepository = (function () {
     modalContainer.classList.add('is-visible');
   }
 
-  let dialogPromiseReject; // This can be set later, by showDialog
-
   function hideModal() {
     let modalContainer = document.querySelector('#modal-container');
     modalContainer.classList.remove('is-visible');
-
-    if (dialogPromiseReject) {
-      dialogPromiseReject();
-      dialogPromiseReject = null;
-    }
   }
 
-  /*function showDialog(title, text) {
-    showModal(title, text);
-
-    // We have defined modalContainer here
-    let modalContainer = document.querySelector('#modal-container');
-
-    // We want to add a confirm and cancel button to the modal
-    let modal = modalContainer.querySelector('.modal');
-
-    let confirmButton = document.createElement('button');
-    confirmButton.classList.add('modal-confirm');
-    confirmButton.innerText = 'Confirm';
-
-    let cancelButton = document.createElement('button');
-    cancelButton.classList.add('modal-cancel');
-    cancelButton.innerText = 'Cancel';
-
-    modal.appendChild(confirmButton);
-    modal.appendChild(cancelButton);
-
-    // We want to focus the confirmButton so that the user can simply press Enter
-    confirmButton.focus();
-    return new Promise((resolve, reject) => {
-      cancelButton.addEventListener('click', hideModal);
-      confirmButton.addEventListener('click', () => {
-        dialogPromiseReject = null; // Reset this
-        hideModal();
-        resolve();
-      });
-
-      // This can be used to reject from other functions
-      dialogPromiseReject = reject;
-    });
-  }
-
-  document.querySelector('#show-dialog').addEventListener('click', () => {
-    showDialog('Confirm action', 'Are you sure you want to do this?').then(
-      function () {
-        alert('confirmed!');
-      },
-      () => {
-        alert('not confirmed');
-      }
-    );
-  });
-
+  //Closes modal when you hit the esc key
   window.addEventListener('keydown', (e) => {
     let modalContainer = document.querySelector('#modal-container');
     if (e.key === 'Escape' && modalContainer.classList.contains('is-visible')) {
       hideModal();
     }
   });
+
   modalContainer.addEventListener('click', (e) => {
+    // Closes modal when you click outside of it
     // Since this is also triggered when clicking INSIDE the modal
     // We only want to close if the user clicks directly on the overlay
     let target = e.target;
@@ -108,10 +58,6 @@ let pokemonRepository = (function () {
       hideModal();
     }
   });
-
-  document.querySelector('#show-modal').addEventListener('click', () => {
-    showModal('Hold on There!', 'Look at this cool box!');
-  });*/
 
   let pokemonList = [];
   //external site we get the pokemon info from

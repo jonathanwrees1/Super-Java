@@ -1,0 +1,14 @@
+.pokemonList {
+  background-color: #4d7a7b;
+  margin-top: 60px;
+}
+.pokemon-header {
+  font-size: 40px;
+  font-family: Luminari, fantasy;
+  text-align: center;
+  border: 5px solid #000;
+  max-width: 300px;
+  margin: 0 auto;
+  border-radius: 50%;
+  background-color: #fff;
+}

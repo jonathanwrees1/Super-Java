@@ -40,11 +40,13 @@ let pokemonRepository = (function () {
     button.innerText = pokemon.name;
     button.classList.add('btn');
     button.classList.add('btn-primary');
+
     button.setAttribute('data-target', '#exampleModal');
     button.setAttribute('data-toggle', 'modal');
 
     listItem.appendChild(button);
     pokemonList.appendChild(listItem);
+
     //listener so details are shown when button is clicked
     button.addEventListener('click', function () {
       showDetails(pokemon);

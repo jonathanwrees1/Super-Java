@@ -1,6 +1,6 @@
 .pokemonList {
   background-color: #4d7a7b;
-  margin-top: 60px;
+  margin-top: 80px;
 }
 .pokemon-header {
   font-size: 40px;
@@ -8,7 +8,28 @@
   text-align: center;
   border: 5px solid #000;
   max-width: 300px;
-  margin: 0 auto;
+  margin: 10px auto 10px auto;
   border-radius: 50%;
-  background-color: #fff;
+  background-color: #e6e6e3;
+}
+.modal-content {
+  text-align: center;
+}
+.list-group-item {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  height: 128px;
+  width: 185px;
+  margin: 10px;
+  background-color: #e6e6e3;
+}
+.list-container {
+  column-count: 3;
+  column-width: 250px;
+}
+.list-group {
+  align-items: center;
+  margin-top: 8px;
 }

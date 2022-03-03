@@ -5,7 +5,7 @@
 
 .pokemon-header {
   font-size: 40px;
-  font-family: Luminari, fantasy;
+  font-family: Comic Sans MS, Comic Sans, cursive;
   text-align: center;
   border: 5px solid black;
   max-width: 300px;
@@ -16,7 +16,16 @@
 
 .modal-content {
   text-align: center;
+  text-transform:capitalize;
+  font-family: Comic Sans MS, Comic Sans, cursive;
 }
+
+.modal-header{
+  background-color:rgb(77, 122, 123);
+  color:white;
+}
+
+
 .list-group-item {
   display: flex;
   text-align: center;
@@ -35,4 +44,19 @@
 .list-group {
   align-items: center;
   margin-top: 8px;
+}
+.navbar.navbar-expand-sm.navbar-light.fixed-top{
+  background-color:gold;
+}
+
+.nav-link{
+  font-family:Comic Sans MS, Comic Sans, cursive;
+  font-size: 20px;
+  
+}
+
+.btn.btn-primary{
+  font-family:Comic Sans MS, Comic Sans, cursive;
+  text-transform:capitalize;
+  background-color:#9B5125;
 }

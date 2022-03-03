@@ -6,10 +6,24 @@
 
     <title>Jonathan's Pokedex</title>
 
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="img/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="img/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="img/favicon-16x16.png"
+    />
     <link rel="manifest" href="site.webmanifest" />
     <link
       rel="stylesheet"
@@ -17,14 +31,21 @@
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
-    <link href="dist/min.styles.css" rel="stylesheet" type="text/css" />
+    <link href="css/styles.css" rel="stylesheet" type="text/css" />
   </head>
   <body class="pokemonList">
     <header>
       <h1 class="pokemon-header">Pokedex</h1>
 
-      <nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
-        <a class="navbar-brand" href="#">Navigation</a>
+      <nav class="navbar navbar-expand-sm navbar-light fixed-top">
+        <a class="navbar-brand" href="#"
+          ><img
+            src="img/pokeball.jpg"
+            alt=""
+            width="40"
+            height="40"
+            class="d-inline-block align-text-top"
+        /></a>
         <button
           class="navbar-toggler"
           type="button"
@@ -44,18 +65,26 @@
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Features</a>
+              <a class="nav-link" href="#">Contact Me</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Pricing</a>
+              <a class="nav-link" href="#">About Me</a>
             </li>
             <li class="nav-item">
               <a class="nav-link disabled" tabindex="-1" aria-disabled="true"
-                >Disabled</a
+                >Store</a
               >
             </li>
           </ul>
         </div>
+        <a class="charmander" href="#"
+          ><img
+            src="img/charmander.png"
+            alt=""
+            width="40"
+            height="40"
+            class="d-inline-block align-text-top"
+        /></a>
       </nav>
     </header>
 
@@ -121,6 +150,6 @@
     ></script>
     <script src="js/promise-polyfill.js"></script>
     <script src="js/fetch-polyfill.js"></script>
-    <script src="dist/min.scripts.js"></script>
+    <script src="js/scripts.js"></script>
   </body>
 </html>

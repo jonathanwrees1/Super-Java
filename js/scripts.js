@@ -33,18 +33,20 @@ let pokemonRepository = (function () {
   //function to turn list items into buttons
   function addListItem(pokemon) {
     let pokemonList = document.querySelector('.list-group');
+
     let listItem = document.createElement('li');
     listItem.classList.add('list-group-item');
 
     let button = document.createElement('button');
     button.innerText = pokemon.name;
     button.classList.add('btn');
-    button.classList.add('btn-primary');
+    button.classList.add('btn-secondary');
 
     button.setAttribute('data-target', '#exampleModal');
     button.setAttribute('data-toggle', 'modal');
 
     listItem.appendChild(button);
+
     pokemonList.appendChild(listItem);
 
     //listener so details are shown when button is clicked

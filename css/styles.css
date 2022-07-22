@@ -4,6 +4,7 @@
   font-family: 'Playfair Display', serif;
   text-transform: uppercase;
   letter-spacing: 0.15em;
+  box-sizing: border-box;
 }
 
 .pokemonList {
@@ -48,10 +49,12 @@
   display: flex;
   text-align: center;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   height: 150px;
-  width: 60%;
+  width: 80%;
+  max-width:220px;
   margin: 10px;
+  
   border-radius: 5px;
   background-color: #e6e6e3;
   background-image: url('../img/pokeball.jpg');

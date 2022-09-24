@@ -7,9 +7,7 @@
   box-sizing: border-box;
 }
 
-.hidden{
-  display:none;
-}
+
 
 .pokemonList {
   background-color: #f0ebe3;
@@ -50,15 +48,11 @@
 }
 
 .list-group-item {
-  display: flex;
+  display:block;
+
   text-align: center;
-  align-items: center;
-  justify-content: space-evenly;
   height: 150px;
-  width: 80%;
-  max-width:220px;
-  margin: 10px;
-  
+
   border-radius: 5px;
   background-color: #e6e6e3;
   background-image: url('../img/pokeball.jpg');
@@ -67,14 +61,16 @@
   background-blend-mode: soft-light;
 }
 
+
 .list-container {
-  column-count: 3;
-  column-width: 250px;
-  padding: 20px;
+  text-align: center;
+  padding: 3%;
 }
 .list-group {
-  align-items: center;
-  margin-top: 8px;
+  display:grid;
+  grid-template-columns: repeat(auto-fill,minmax(200px, 1fr));
+  gap:1rem;
+  margin-top:1rem;
 }
 .navbar.navbar-expand-sm.navbar-dark.fixed-top {
   background-color: #576f72;
@@ -91,6 +87,7 @@ text-align:center;
 }
 
 .btn.btn-secondary {
+  margin:2.5em auto;
   text-transform: uppercase;
   background-color: #576f72;
 }

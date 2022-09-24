@@ -40,7 +40,7 @@ let pokemonRepository = (function () {
 
   let pokemonList = [];
   //external site we get the pokemon info from
-  let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
+  let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=1000';
 
   //add pokemon to end of list
   function add(pokemon) {
@@ -116,6 +116,21 @@ let pokemonRepository = (function () {
       showDetails(pokemon);
     });
   }
+  const list = document.getElementById('poke-list');
+
+  const searchBar = document.getElementById('myInput');
+  searchBar.addEventListener('keyup', function (event) {
+    const term = event.target.value.toLowerCase();
+    const words = list.getElementsByTagName('li');
+    Array.from(words).forEach(function (word) {
+      const title = word.textContent;
+      if (title.toLowerCase().indexOf(term) != -1) {
+        word.style.display = 'block';
+      } else {
+        word.style.display = 'none';
+      }
+    });
+  });
 
   //displays all details in the modal
   function showDetails(pokemon) {
